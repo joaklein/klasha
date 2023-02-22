@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dd510d8712.js" crossorigin="anonymous"></script>
+    <script src="chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Klasha</title>
+</head>
+
+<body>
+
+    <aside>
+        <h4><em>klasha</em></h4>
+        <div class="nav-section">
+            <p>Main pages</p>
+            <a href="#"><i class="fa-solid fa-chart-pie"></i> Dashboard</a>
+            <a href="#"><i class="fa-solid fa-wallet"></i> Balances</a>
+            <a href="#"><i class="fa-solid fa-arrow-down-up-across-line"></i> Transactions</a>
+            <a href="#"><i class="fa-solid fa-chart-simple"></i> Analytics</a>
+            <a href="#"><i class="fa-solid fa-bullhorn"></i> Marketing</a>
+            <a href="#"><i class="fa-solid fa-repeat"></i> Exchange rates</a>
+        </div>
+        <div class="nav-section">
+            <p>Accept payments</p>
+            <a href="#"><i class="fa-solid fa-link"></i> Payment Links</a>
+            <a href="#"><i class="fa-solid fa-calendar-days"></i> Subscriptions</a>
+            <a href="#"><i class="fa-solid fa-file-zipper"></i> Invoices</a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i> KlashaCheckout</a>
+        </div>
+        <div class="nav-section">
+            <p>Send payments</p>
+            <a href="#"><i class="fa-solid fa-arrow-right-arrow-left"></i> KlashaWire</a>
+            <a href="#"><i class="fa-solid fa-circle-question"></i> Contact Us</a>
+        </div>
+        <button class="nav-hide"><i class="fa-solid fa-chevron-left"></i>Hide panel</button>
+
+    </aside>
+    <main>
+        <header>
+            <p class="date">Today: August 31, 2021</p>
+            <div class="user-links">
+                <div class="edit-profile">
+                    <a href="#">Edit profile <i class="fa-solid fa-pencil"></i></a>
+                </div>
+                <select name="language" id="language">
+                    <option value="English">English</option>
+                    <option value="Español">Español</option>
+                    <option value="Deutsch">Deutsch</option>
+                    <option value="Français">Français</option>
+                </select>
+                <div class="user">
+                    <div class="user-profile-pic"></div>
+                    <p>Welcome back, <a href="#">User</a> !</p>
+                </div>
+            </div>
+        </header>
+
+        <hr>
+
+        <section>
+            <h5>Balances</h5>
+            <div class="balances-wrapper">
+                <div class="balances-card card-1">
+                    <div class="balances-card-header">
+                        <p>Aug 24-Sep 01</p>
+                        <p>1 USD=420 NGN</p>
+                    </div>
+
+
+                    <canvas id="myChart" class="balances-graph"></canvas>
+
+                    <div class="balances-card-footer">
+                        <p>Merchant's wallet balance</p>
+                        <h5>&#8358; 345,652.50</h5>
+                    </div>
+                </div>
+                <div class="balances-card card-2">
+                    <div class="balances-card-header">
+                        <p>Aug 24-Sep 01</p>
+                    </div>
+                    <div class="balances-card-footer">
+                        <p>Total payout</p>
+                        <h5>&#8358; 84,652.50</h5>
+                    </div>
+                </div>
+                <div class="balances-card card-3">
+                    <h4>Klashawire - multiple payments into one batch.</h4>
+                </div>
+            </div>
+            <div class="payout-table-wrapper">
+                <div class="payout-table-header">
+                    <h5>Payout table</h5>
+                    <div class="payout-table-params">
+                        <div class="search-wrapper">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" name="search" id="search" placeholder="Search">
+                        </div>
+                        <div class="payout-table-params-date">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p>Aug 29, 21 - Sep 07, 21</p>
+                        </div>
+                        <div class="payout-table-params-buttons">
+                            <button class="btn-export">Export CSV</button>
+                            <button class="btn-payout">Payout</button>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Payout ID</th>
+                            <th>Status</th>
+                            <th>Bank</th>
+                            <th>Number</th>
+                            <th>Request date</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Desirae Torff</td>
+                            <td>GB124QWERTY12346</td>
+                            <td>
+                                <div class="payout-pending">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <p>pending</p>
+                                </div>
+                            </td>
+                            <td>Wema Bank</td>
+                            <td>2345445</td>
+                            <td>24.08.2021</td>
+                            <td>$ 230.00</td>
+                        </tr>
+                        <tr>
+                            <td>Zain Baptista</td>
+                            <td>DD137SWEFTR25172</td>
+                            <td>
+                                <div class="payout-success">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <p>success</p>
+                                </div>
+                            </td>
+                            <td>Wema Bank</td>
+                            <td>5423465</td>
+                            <td>19.08.2021</td>
+                            <td>$ 272.00</td>
+                        </tr>
+                        <tr>
+                            <td>Tatiana Kenter</td>
+                            <td>CB328ABCEDF23416</td>
+                            <td>
+                                <div class="payout-failed">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <p>failed</p>
+                                </div>
+                            </td>
+                            <td>Wema Bank</td>
+                            <td>4253635</td>
+                            <td>22.08.2021</td>
+                            <td>$ 480.00</td>
+                        </tr>
+                        <tr>
+                            <td>Carla Press</td>
+                            <td>DD137SWEFTR25172</td>
+                            <td>
+                                <div class="payout-success">
+                                    <i class="fa-solid fa-circle"></i>
+                                    <p>success</p>
+                                </div>
+                            </td>
+                            <td>Wema Bank</td>
+                            <td>5423465</td>
+                            <td>19.08.2021</td>
+                            <td>$ 272.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
