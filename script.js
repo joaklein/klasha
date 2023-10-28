@@ -26,3 +26,11 @@ new Chart("myChart", {
         }
     }
 });
+
+document.querySelector('.show-aside-icon').addEventListener('click', () => {
+    document.querySelector('aside').classList.add('aside-show')
+})
+
+document.querySelector('.nav-hide').addEventListener('click', () => {
+    document.querySelector('aside').classList.remove('aside-show')
+})
